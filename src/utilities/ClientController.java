@@ -26,7 +26,7 @@ public class ClientController implements Runnable{
                     out.println("You can exit now");
                     break;
                 }
-                if(message!=null)out.println("ok, noticied me when you want to exit");
+                if(message!=null)out.println("ok, inform me when you want to exit");
                 if (message == null) break;
             }
             System.out.println("Client disconnected of the bus: " + clientSocket.getInetAddress().getHostAddress());
