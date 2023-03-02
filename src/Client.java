@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Client {
-
         public static void main(String[] args) throws IOException {
             Socket socket = new Socket("localhost", 8080);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -18,6 +17,9 @@ public class Client {
                 String message = userInput.readLine();
                 out.println(message);
                 System.out.println(in.readLine());
+                if (message.equals("exit")){
+                    System.exit(0);
+                }
             }
         }
 
